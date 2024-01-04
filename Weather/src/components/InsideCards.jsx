@@ -15,7 +15,7 @@ export default function InsideCards() {
   return (
     <>
       <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-2 gap-y-6 mt-12  place-items-center ">
-        <div className="uv mx-auto w-56 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
+        <div className="uv mx-auto w-44 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
           <p className="flex space-x-2 text-gray-400">
             <IoMdSunny className="text-gray-400 mt-1 " /> <span>UV INDEX</span>
           </p>
@@ -24,7 +24,7 @@ export default function InsideCards() {
           {/* <p className="text-md">Low for the rest of the day</p> */}
         </div>
 
-        <div className="sunset mx-auto w-56 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
+        <div className="sunset mx-auto w-44 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
           <p className="flex space-x-2 text-gray-400">
             <FaWind className="text-gray-400 mt-1 " /> <span>WIND</span>
           </p>
@@ -32,7 +32,7 @@ export default function InsideCards() {
           <p className="text-xl ">{CurrentContent.wind_mph} mph</p>
         </div>
 
-        <div className="sunset mx-auto w-56 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
+        <div className="sunset mx-auto w-44 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
           <p className="flex space-x-2 text-gray-400">
             <IoWaterSharp className="text-gray-400 mt-1 " />{" "}
             <span>PRECIPITATION</span>
@@ -41,7 +41,7 @@ export default function InsideCards() {
           <p className="text-lg ">in last 24 hours</p>
         </div>
 
-        <div className="sunset mx-auto w-56 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
+        <div className="sunset mx-auto w-44 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
           <p className="flex space-x-2 text-gray-400">
             <WiHumidity className="text-gray-400 mt-1 " /> <span>HUMIDITY</span>
           </p>
@@ -49,7 +49,7 @@ export default function InsideCards() {
           {/* <p className="text-lg "></p> */}
         </div>
 
-        <div className="sunset mx-auto w-56 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
+        <div className="sunset mx-auto w-44 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
           <p className="flex space-x-2 text-gray-400">
             <PiThermometerHotFill className="text-gray-400 mt-1 " />
             <span>FEELS LIKE</span>
@@ -59,7 +59,7 @@ export default function InsideCards() {
           {/* <p className="text-lg "></p> */}
         </div>
 
-        <div className="sunset mx-auto w-56 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
+        <div className="sunset mx-auto w-44 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
           <p className="flex space-x-2 text-gray-400">
             <WiWindy className="text-gray-400 mt-1 " />
             <span>PRESSURE</span>
@@ -67,7 +67,7 @@ export default function InsideCards() {
           <p className="text-xl mt-2">{CurrentContent.pressure_mb} Pa </p>
         </div>
 
-        <div className="sunset mx-auto w-56 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
+        <div className="sunset mx-auto w-44 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
           <p className="flex space-x-2 text-gray-400">
             <FaEye className="text-gray-400 mt-1 " />
             <span>VISIBILITY</span>
@@ -76,7 +76,7 @@ export default function InsideCards() {
           <p className="text-xl mt-2">{CurrentContent.vis_miles} mph </p>
         </div>
 
-        <div className="sunset mx-auto w-56 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
+        <div className="sunset mx-auto w-44 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
           <p className="flex space-x-2 text-gray-400">
             <WiCloudyGusts className="text-gray-400 mt-1 " />
             <span>WIND GUST</span>

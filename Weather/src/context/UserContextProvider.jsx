@@ -4,10 +4,11 @@ import UserContext from "./UserContext";
 const UserContextProvider = ({ children }) => {
   const [LocationContent, setLocationContent] = useState([]);
   const [CurrentContent, setCurrentContent] = useState([]);
+  const [useForecast, setUseForecast] = useState([]);
+  const [city, setCity] = useState("shillong");
 
   async function setContentFromAPI() {
-    const url =
-      "https://weatherapi-com.p.rapidapi.com/current.json?q=25.5788%2C91.8933";
+    const url = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${city}&days=3`;
 
     const options = {
       method: "GET",
@@ -22,7 +23,7 @@ const UserContextProvider = ({ children }) => {
       const result = await response.json();
       setLocationContent(result.location);
       setCurrentContent(result.current);
-      // console.log(result);
+      setUseForecast(result.forecast);
     } catch (error) {
       console.error(error);
     }
@@ -30,16 +31,19 @@ const UserContextProvider = ({ children }) => {
 
   useEffect(() => {
     setContentFromAPI();
-  }, []);
+  }, [city]);
 
-  console.log(LocationContent);
-  console.log(CurrentContent);
+  // console.log(LocationContent);
+  // console.log(CurrentContent);
+  console.log(useForecast);
 
   return (
     <UserContext.Provider
       value={{
         LocationContent: LocationContent,
         CurrentContent: CurrentContent,
+        setCity: setCity,
+        forecast: useForecast,
       }}
     >
       {children}
