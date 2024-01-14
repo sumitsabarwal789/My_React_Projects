@@ -11,7 +11,7 @@ import { FaEye } from "react-icons/fa";
 import { WiCloudyGusts } from "react-icons/wi";
 
 export default function InsideCards() {
-  const { LocationContent, CurrentContent } = useContext(UserContext);
+  const { CurrentContent } = useContext(UserContext);
   return (
     <>
       <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-2 gap-y-6 mt-12  place-items-center ">

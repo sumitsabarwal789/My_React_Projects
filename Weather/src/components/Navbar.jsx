@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import UserContext from "../context/UserContext";
 
-export default function Navbar() {
+export default function Navbar({ background }) {
   const { setCity } = useContext(UserContext);
   const [inputValue, setInputValue] = useState("");
 
@@ -17,7 +17,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 flex justify-evenly md:justify-between">
+      <nav
+        className=" fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 flex justify-evenly md:justify-between"
+        style={{ backgroundColor: background }}
+      >
         <section className="max-w-screen-xl flex justify-start p-4 space-x-3">
           <img src="logo.png" className="h-8 mt-1" alt="Flowbite Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white hidden md:inline-block">
@@ -39,9 +42,10 @@ export default function Navbar() {
           <input
             value={inputValue}
             onChange={handleInputChange}
-            className="bg-gray-900 text-gray-300 text-center w-40 lg:w-72 border border-gray-700 rounded-2xl hidden md:inline-block my-3"
+            className=" text-gray-300 text-center w-40 lg:w-72 border border-gray-700 rounded-2xl hidden md:inline-block my-3"
             type="text"
             placeholder="Enter your location"
+            style={{ backgroundColor: background }}
           />
           <button
             onClick={handleSearch}

@@ -11,6 +11,7 @@ export default function ForecastWeek() {
   let tomorrowMAX;
   let overmorrowMIN;
   let overmorrowMAX;
+
   if (
     forecast &&
     forecast.forecastday &&
@@ -41,7 +42,7 @@ export default function ForecastWeek() {
               </div>
               <div className="flex space-x-6 w-[50%] text-right justify-end">
                 <p className="min text-gray-400">{todayMIN}&deg;</p>
-                <p className="mt-3 h-1 w-60 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 rounded-lg"></p>
+                <p className="mt-3 h-1 w-96 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 rounded-lg"></p>
                 <p className="max">{todayMAX}&deg;</p>
               </div>
             </section>
@@ -53,19 +54,19 @@ export default function ForecastWeek() {
               </div>
               <div className="flex space-x-6 w-[50%] text-right justify-end">
                 <p className="min text-gray-400">{tomorrowMIN}&deg;</p>
-                <p className="mt-3 h-1 w-60 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 rounded-lg"></p>
+                <p className="mt-3 h-1 w-96 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 rounded-lg"></p>
                 <p className="max">{tomorrowMAX}&deg;</p>
               </div>
             </section>
 
-            <section className="overmorrow  flex justify-between">
+            <section className="overmorrow  flex justify-between pb-2">
               <div className="w-[30%] text-start">Overmorrow</div>
               <div className="w-[20%]">
                 <IoSunny className="text-yellow-600" />
               </div>
               <div className="flex space-x-6 w-[50%] text-right justify-end">
                 <p className="min text-gray-400">{overmorrowMIN}&deg;</p>
-                <p className="mt-3 h-1 w-60 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 rounded-lg"></p>
+                <p className="mt-3 h-1 w-96 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 rounded-lg"></p>
                 <p className="max">{overmorrowMAX}&deg;</p>
               </div>
             </section>
