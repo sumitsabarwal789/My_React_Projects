@@ -2,13 +2,11 @@ import { useContext, useState } from "react";
 import UserContext from "../context/UserContext";
 export default function Card() {
   const { LocationContent, CurrentContent } = useContext(UserContext);
-  const [infoUpdated, setInfoUpdated] = useState(new Date());
 
   if (!LocationContent || !CurrentContent) {
-    return <div>Loading...</div>; // or handle the loading state
+    return <div>Loading...</div>;
   }
 
-  // Check if the required properties exist before rendering
   const { name: locationName = "" } = LocationContent;
 
   const {
@@ -23,7 +21,7 @@ export default function Card() {
         {conditionText === "Sunny" && (
           <div
             className="pt-10 flex flex-col justify-center space-y-2 bg-cover bg-no-repeat bg-center h-96"
-            style={{ backgroundImage: "url('/sunny.jpg')" }}
+            style={{ backgroundImage: "url('/sunny.avif')" }}
           >
             <h3 className="text-3xl">{locationName}</h3>
             <h3 className="text-6xl">{temperature}&deg;</h3>
@@ -73,6 +71,19 @@ export default function Card() {
             className="pt-10 flex flex-col justify-center space-y-2 bg-cover bg-no-repeat bg-center h-96"
             style={{
               backgroundImage: "url('/patchyRain.jpg')",
+            }}
+          >
+            <h3 className="text-3xl">{locationName}</h3>
+            <h3 className="text-6xl">{temperature}&deg;</h3>
+            <h3 className="text-2xl">{conditionText}</h3>
+          </div>
+        )}
+
+        {conditionText === "Overcast" && (
+          <div
+            className="pt-10 flex flex-col justify-center space-y-2 bg-cover bg-no-repeat bg-center h-96"
+            style={{
+              backgroundImage: "url('/overcast.avif')",
             }}
           >
             <h3 className="text-3xl">{locationName}</h3>

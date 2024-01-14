@@ -40,33 +40,32 @@ export default function Forcast() {
     forecast.forecastday[0].hour.length > 0
   ) {
     // Accessing the temperature for the first hour of the first forecast day
-    temperatureC0 = forecast.forecastday[0].hour[0].temp_c;
-    temperatureC1 = forecast.forecastday[0].hour[1].temp_c;
-    temperatureC2 = forecast.forecastday[0].hour[2].temp_c;
-    temperatureC3 = forecast.forecastday[0].hour[3].temp_c;
-    temperatureC4 = forecast.forecastday[0].hour[4].temp_c;
-    temperatureC5 = forecast.forecastday[0].hour[5].temp_c;
-    temperatureC6 = forecast.forecastday[0].hour[6].temp_c;
-    temperatureC7 = forecast.forecastday[0].hour[7].temp_c;
-    temperatureC8 = forecast.forecastday[0].hour[8].temp_c;
-    temperatureC9 = forecast.forecastday[0].hour[9].temp_c;
-    temperatureC10 = forecast.forecastday[0].hour[10].temp_c;
-    temperatureC11 = forecast.forecastday[0].hour[11].temp_c;
-    temperatureC12 = forecast.forecastday[0].hour[12].temp_c;
-    temperatureC13 = forecast.forecastday[0].hour[13].temp_c;
-    temperatureC14 = forecast.forecastday[0].hour[14].temp_c;
-    temperatureC15 = forecast.forecastday[0].hour[15].temp_c;
-    temperatureC16 = forecast.forecastday[0].hour[16].temp_c;
-    temperatureC17 = forecast.forecastday[0].hour[17].temp_c;
-    temperatureC18 = forecast.forecastday[0].hour[18].temp_c;
-    temperatureC19 = forecast.forecastday[0].hour[19].temp_c;
-    temperatureC20 = forecast.forecastday[0].hour[20].temp_c;
-    temperatureC21 = forecast.forecastday[0].hour[21].temp_c;
-    temperatureC22 = forecast.forecastday[0].hour[22].temp_c;
-    temperatureC23 = forecast.forecastday[0].hour[23].temp_c;
+    temperatureC0 = parseInt(forecast.forecastday[0].hour[0].temp_c);
+    temperatureC1 = parseInt(forecast.forecastday[0].hour[1].temp_c);
+    temperatureC2 = parseInt(forecast.forecastday[0].hour[2].temp_c);
+    temperatureC3 = parseInt(forecast.forecastday[0].hour[3].temp_c);
+    temperatureC4 = parseInt(forecast.forecastday[0].hour[4].temp_c);
+    temperatureC5 = parseInt(forecast.forecastday[0].hour[5].temp_c);
+    temperatureC6 = parseInt(forecast.forecastday[0].hour[6].temp_c);
+    temperatureC7 = parseInt(forecast.forecastday[0].hour[7].temp_c);
+    temperatureC8 = parseInt(forecast.forecastday[0].hour[8].temp_c);
+    temperatureC9 = parseInt(forecast.forecastday[0].hour[9].temp_c);
+    temperatureC10 = parseInt(forecast.forecastday[0].hour[10].temp_c);
+    temperatureC11 = parseInt(forecast.forecastday[0].hour[11].temp_c);
+    temperatureC12 = parseInt(forecast.forecastday[0].hour[12].temp_c);
+    temperatureC13 = parseInt(forecast.forecastday[0].hour[13].temp_c);
+    temperatureC14 = parseInt(forecast.forecastday[0].hour[14].temp_c);
+    temperatureC15 = parseInt(forecast.forecastday[0].hour[15].temp_c);
+    temperatureC16 = parseInt(forecast.forecastday[0].hour[16].temp_c);
+    temperatureC17 = parseInt(forecast.forecastday[0].hour[17].temp_c);
+    temperatureC18 = parseInt(forecast.forecastday[0].hour[18].temp_c);
+    temperatureC19 = parseInt(forecast.forecastday[0].hour[19].temp_c);
+    temperatureC20 = parseInt(forecast.forecastday[0].hour[20].temp_c);
+    temperatureC21 = parseInt(forecast.forecastday[0].hour[21].temp_c);
+    temperatureC22 = parseInt(forecast.forecastday[0].hour[22].temp_c);
+    temperatureC23 = parseInt(forecast.forecastday[0].hour[23].temp_c);
   }
 
-  console.log(temperatureC0);
   return (
     <>
       <section className="hourlyForecast  mx-5 mt-8 overflow-x-auto ">
