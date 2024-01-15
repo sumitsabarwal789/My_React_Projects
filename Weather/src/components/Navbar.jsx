@@ -31,9 +31,10 @@ export default function Navbar({ background }) {
         <input
           value={inputValue}
           onChange={handleInputChange}
-          className="bg-gray-900 text-gray-300 text-center w-52 md:hidden border border-gray-700  rounded-2xl my-3"
+          className="bg-gray-900 text-gray-300 text-center w-52 md:hidden border border-slate-500  rounded-2xl my-3"
           type="text"
           placeholder="Enter your location"
+          style={{ backgroundColor: background }}
         />
         <section
           className=" md:flex md:w-auto  md:pr-5 space-x-3"
@@ -42,7 +43,7 @@ export default function Navbar({ background }) {
           <input
             value={inputValue}
             onChange={handleInputChange}
-            className=" text-gray-300 text-center w-40 lg:w-72 border border-gray-700 rounded-2xl hidden md:inline-block my-3"
+            className=" text-gray-300 text-center w-40 lg:w-72 border border-slate-500 rounded-2xl hidden md:inline-block my-3"
             type="text"
             placeholder="Enter your location"
             style={{ backgroundColor: background }}

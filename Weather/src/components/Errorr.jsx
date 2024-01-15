@@ -1,6 +1,9 @@
 import { IoMdAlert } from "react-icons/io";
 import { FaHandPointRight } from "react-icons/fa";
 export default function Errorr() {
+  const reloadd = () => {
+    window.location.reload();
+  };
   return (
     <>
       <div className=" text-center bg-[#1F2041] h-screen w-screen text-white flex flex-col space-y-10 items-center">
@@ -35,7 +38,10 @@ export default function Errorr() {
           </div>
 
           <div className="flex justify-center ">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded mt-5 ">
+            <button
+              onClick={reloadd}
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded mt-5 "
+            >
               Home
             </button>
           </div>

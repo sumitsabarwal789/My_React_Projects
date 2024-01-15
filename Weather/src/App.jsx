@@ -6,34 +6,35 @@ import ForecastWeek from "./components/ForecastWeek";
 import { useContext, useState, useEffect } from "react";
 import UserContext from "./context/UserContext";
 import Errorr from "./components/Errorr";
+import Footer from "./components/Footer";
 
 export default function App() {
   const { LocationContent, CurrentContent } = useContext(UserContext);
   const [background, setBackground] = useState("#1F2041");
 
   useEffect(() => {
-    let a =
+    let weatherCondition =
       CurrentContent &&
       CurrentContent.condition &&
       CurrentContent.condition.text;
 
-    if (a === "Clear") {
+    if (weatherCondition === "Clear") {
       setBackground("#254269");
-    } else if (a === "Light snow") {
+    } else if (weatherCondition === "Light snow") {
       setBackground("#5176aa");
-    } else if (a === "Moderate snow") {
+    } else if (weatherCondition === "Moderate snow") {
       setBackground("#5176aa");
-    } else if (a === "Light rain") {
+    } else if (weatherCondition === "Light rain") {
       setBackground("#a3b5c3");
-    } else if (a === "Partly cloudy") {
+    } else if (weatherCondition === "Partly cloudy") {
       setBackground("#39465f");
-    } else if (a === "Mist") {
+    } else if (weatherCondition === "Mist") {
       setBackground("#101e26");
-    } else if (a === "Sunny") {
+    } else if (weatherCondition === "Sunny") {
       setBackground("#6a8aa0");
-    } else if (a === "Fog") {
+    } else if (weatherCondition === "Fog") {
       setBackground("#46535b");
-    } else if (a === "Overcast") {
+    } else if (weatherCondition === "Overcast") {
       setBackground("#46535b");
     } else {
       setBackground("#1F2041");
@@ -57,6 +58,7 @@ export default function App() {
       <Forcast />
       <ForecastWeek />
       <InsideCards />
+      <Footer background={background} />
     </div>
   );
 }

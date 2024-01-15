@@ -23,7 +23,6 @@ export default function Card() {
     todayMIN = parseInt(forecast.forecastday[0].day.mintemp_c);
     todayMAX = parseInt(forecast.forecastday[0].day.maxtemp_c);
   }
-  console.log(todayMAX);
   return (
     <>
       <section className="w-full h-full bg-[#1F2041] text-center text-white mt-12">
@@ -35,7 +34,7 @@ export default function Card() {
             <h3 className="text-3xl">{locationName}</h3>
             <h3 className="text-6xl">{temperature}&deg;</h3>
             <h3 className="text-2xl ">{conditionText}</h3>
-            <div className="flex">
+            <div className="flex justify-center text-2xl space-x-3">
               <p>{todayMIN}&deg;</p>
               <p>{todayMAX}&deg;</p>
             </div>
