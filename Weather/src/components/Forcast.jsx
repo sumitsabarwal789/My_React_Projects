@@ -6,7 +6,6 @@ import { IoSunny } from "react-icons/io5";
 
 export default function Forcast() {
   const { forecast } = useContext(UserContext);
-  // const [hour , setHour] = useState(0)
   let temperatureC0;
   let temperatureC1;
   let temperatureC2;
@@ -317,7 +316,7 @@ export default function Forcast() {
 
             <div className="flex flex-col space-y-3 justify-center items-center pr-6">
               <p className="text-md">
-                12<span className="text-xs pt-[0.39rem]">PM</span>
+                12<span className="text-xs pt-[0.39rem]">AM</span>
               </p>
               <p className="text-lg">
                 <BsFillMoonStarsFill />

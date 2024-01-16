@@ -26,7 +26,10 @@ export default function App() {
       setBackground("#5176aa");
     } else if (weatherCondition === "Light rain") {
       setBackground("#a3b5c3");
-    } else if (weatherCondition === "Partly cloudy") {
+    } else if (
+      weatherCondition === "Partly cloudy" ||
+      weatherCondition === "Patchy rain possible"
+    ) {
       setBackground("#39465f");
     } else if (weatherCondition === "Mist") {
       setBackground("#101e26");
@@ -35,6 +38,12 @@ export default function App() {
     } else if (weatherCondition === "Fog") {
       setBackground("#46535b");
     } else if (weatherCondition === "Overcast") {
+      setBackground("#46535b");
+    } else if (
+      weatherCondition === "Patchy light rain with thunder" ||
+      weatherCondition === "Thundery outbreaks possible" ||
+      weatherCondition === "Moderate or heavy rain with thunder"
+    ) {
       setBackground("#46535b");
     } else {
       setBackground("#1F2041");

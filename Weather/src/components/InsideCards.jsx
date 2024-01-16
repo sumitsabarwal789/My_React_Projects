@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
 import { IoMdSunny } from "react-icons/io";
@@ -14,6 +14,7 @@ export default function InsideCards() {
   let sunset;
   let sunrise;
   const { CurrentContent, forecast } = useContext(UserContext);
+  const [uvText, setUvText] = useState("");
 
   if (
     forecast &&
@@ -24,6 +25,19 @@ export default function InsideCards() {
     sunset = forecast.forecastday[0].astro.sunset;
     sunrise = forecast.forecastday[0].astro.sunrise;
   }
+  useEffect(() => {
+    if (CurrentContent.uv <= 2) {
+      setUvText("UV index is low");
+    } else if (CurrentContent.uv <= 5) {
+      setUvText("Moderate");
+    } else if (CurrentContent.uv <= 7) {
+      setUvText("High");
+    } else if (CurrentContent.uv <= 10) {
+      setUvText("Very High");
+    } else {
+      setUvText("Extreme");
+    }
+  }, [CurrentContent.uv]);
 
   return (
     <>
@@ -33,7 +47,7 @@ export default function InsideCards() {
             <IoMdSunny className="text-gray-400 mt-1 " /> <span>UV INDEX</span>
           </p>
           <p className="text-2xl">{CurrentContent.uv}</p>
-          <p className="text-lg">Low</p>
+          <p className="text-lg">{uvText}</p>
         </div>
 
         <div className="sunset mx-auto w-44 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">
@@ -68,7 +82,6 @@ export default function InsideCards() {
           </p>
           <p className="text-xl mt-2">{CurrentContent.feelslike_c}&deg; c </p>
           <p className="text-xl mt-2">{CurrentContent.feelslike_f}&deg; f </p>
-          {/* <p className="text-lg "></p> */}
         </div>
 
         <div className="sunset mx-auto w-44 sm:w-40 md:w-40 lg:w-60 h-40 rounded-5 shadow-md backdrop-blur-14 bg-white bg-opacity-5 p-3  rounded-xl text-left flex flex-col space-y-3">

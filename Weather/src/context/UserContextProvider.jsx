@@ -35,7 +35,7 @@ const UserContextProvider = ({ children }) => {
 
   // console.log(LocationContent);
   // console.log(CurrentContent);
-  // console.log(useForecast);
+  console.log(useForecast);
 
   return (
     <UserContext.Provider
